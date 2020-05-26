@@ -90,7 +90,6 @@ float LinuxParser::MemoryUtilization() {
   }
   float total_mem = std::stof(mem_total);
   float total_free = std::stof(mem_free);
-  std::cerr << total_mem << "  " << total_free << std::endl;
   return ((total_mem - total_free) / total_mem);
 }
 
