@@ -29,11 +29,11 @@ float System::MemoryUtilization() { return 0.0; }
 std::string System::OperatingSystem() { return LinuxParser::OperatingSystem(); }
 
 // TODO: Return the number of processes actively running on the system
-int System::RunningProcesses() { return 0; }
+int System::RunningProcesses() { LinuxParser::RunningProcesses(); }
 
 // TODO: Return the total number of processes on the system
 // check if this has to be read from the meminfo page
-int System::TotalProcesses() { return LinuxParser::Pids().size(); }
+int System::TotalProcesses() { return LinuxParser::TotalProcesses(); }
 
 // TODO: Return the number of seconds since the system started running
 //@todo somhow this is not printed in monitor but value is correct
